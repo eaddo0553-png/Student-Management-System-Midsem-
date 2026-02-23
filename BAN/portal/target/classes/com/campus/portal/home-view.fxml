@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.campus.portal.controller.HomeController">
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <Label text="Student Management System"
+                   style="-fx-font-size:20px;-fx-font-weight:bold;"/>
+            <Button text="Manage Learners" onAction="#openLearners"/>
+            <Button text="Analytics" onAction="#openAnalytics"/>
+        </VBox>
+    </center>
+
+</BorderPane>

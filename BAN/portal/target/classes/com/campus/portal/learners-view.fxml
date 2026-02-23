@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.campus.portal.controller.LearnersController">
+
+    <top>
+        <Label text="Learner Management"
+               style="-fx-font-size: 20px; -fx-padding: 10;" />
+    </top>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10;">
+
+            <!-- FORM SECTION -->
+            <GridPane hgap="10" vgap="10">
+
+                <Label text="ID Number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="regField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="nameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Course:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="courseField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Level:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="levelField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="GPA:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="scoreField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Email:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                <Label text="Contact:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <TextField fx:id="contactField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                <Label text="Status:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="statusBox"
+                          GridPane.rowIndex="7"
+                          GridPane.columnIndex="1"/>
+
+            </GridPane>
+
+            <!-- BUTTONS -->
+            <HBox spacing="10">
+                <Button text="Add" onAction="#add"/>
+                <Button text="Update" onAction="#update"/>
+                <Button text="Delete" onAction="#delete"/>
+                <Button text="Export CSV" onAction="#exportCSV"/>
+                <Button text="Import CSV" onAction="#importCSV"/>
+                <Button text="Back" onAction="#goBack"/>
+            </HBox>
+
+            <!-- TABLE -->
+            <TableView fx:id="table">
+                <columns>
+                    <TableColumn fx:id="regCol"
+                                 text="ID Number"
+                                 prefWidth="100"/>
+
+                    <TableColumn fx:id="nameCol"
+                                 text="Name"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="courseCol"
+                                 text="Course"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="levelCol"
+                                 text="Level"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="scoreCol"
+                                 text="GPA"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="statusCol"
+                                 text="Status"
+                                 prefWidth="100"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+
+</BorderPane>

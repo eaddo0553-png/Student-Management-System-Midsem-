@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.campus.portal.controller.AnalyticsController">
+
+    <top>
+        <HBox spacing="10">
+            <Button text="← Back" onAction="#goBack"/>
+            <Button text="Top 10" onAction="#top10"/>
+            <Button text="Under 2.0 GPA" onAction="#under2"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn fx:id="regCol" text="ID Number"/>
+                <TableColumn fx:id="nameCol" text="Name"/>
+                <TableColumn fx:id="scoreCol" text="GPA"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
